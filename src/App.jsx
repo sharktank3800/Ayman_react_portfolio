@@ -1,21 +1,28 @@
-import { useState } from 'react'
-import About from './components/About'
-import Contact from './components/'
-import Header from './components/'
-import Portfolio from './components/'
-import Resume from './components/'
-import Footer from './components/'
+import { Routes, Route } from "react-router-dom";
 
-import './App.css'
+import Header from "./components/Header";
+
+
+import About from "./pages/About";
+import Contact from "./pages/Contact";
+import Portfolio from "./pages/Portfolio";
+import Resume from "./pages/Resume"
+
 
 function App() {
-  
 
   return (
     <>
+      <Header />
 
+      <Routes>
+        <Route path="/" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/contract" element={<Portfolio />} />
+        <Route path="/contract" element={<Resume />} />
+      </Routes>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
