@@ -1,11 +1,11 @@
 import { Routes, Route } from "react-router-dom";
 
 import Header from "./components/Header";
-
+import Footer from "./components/Footer";
 
 import About from "./pages/About";
 import Contact from "./pages/Contact";
-import Portfolio from "./pages/Portfolio";
+import Projects from "./pages/Projects";
 import Resume from "./pages/Resume"
 
 
@@ -18,9 +18,11 @@ function App() {
       <Routes>
         <Route path="/" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/contract" element={<Portfolio />} />
-        <Route path="/contract" element={<Resume />} />
+        <Route path="/projects" element={<Projects />} />
+        <Route path="/resume" element={<Resume />} />
       </Routes>
+
+      <Footer/>
     </>
   );
 }
